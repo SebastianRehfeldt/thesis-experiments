@@ -1,0 +1,470 @@
+CONFIG EXPERIMENT
+
+{
+    "n_runs": 1,
+    "n_insertions": 5,
+    "seeds": [
+        42,
+        0,
+        13,
+        84,
+        107,
+        15,
+        23,
+        11,
+        174,
+        147
+    ],
+    "missing_rates": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+    ],
+    "is_real_data": true,
+    "update_config": false,
+    "update_attribute": "n_features"
+}
+
+CONFIG DATASET
+
+{
+    "name": "ionosphere"
+}
+
+CONFIG ALGORITHMS
+
+CONFIG - RaR-deletion
+{
+    "knn_neighbors": 3,
+    "mi_neighbors": 6,
+    "k": 10,
+    "nominal_distance": 1,
+    "use_cv": false,
+    "eval_method": "rar",
+    "seed": null,
+    "n_subspaces": 859,
+    "subspace_size": [
+        1,
+        3
+    ],
+    "n_jobs": 1,
+    "boost_value": 0.1,
+    "boost_inter": 0.1,
+    "boost_corr": 0.1,
+    "active_sampling": true,
+    "active_sampling_mr": true,
+    "active_sampling_rel": true,
+    "active_sampling_corr": true,
+    "approach": "deletion",
+    "create_category": false,
+    "weight_approach": "alpha",
+    "dist_method": "distance",
+    "imputation_method": "knn",
+    "subspace_method": "adaptive",
+    "redundancy_approach": "arvind",
+    "beta": 0.01,
+    "weight": 1,
+    "n_targets": 1,
+    "n_resamples": 5,
+    "min_slices": 30,
+    "regularization": 1,
+    "samples_per_class": 5,
+    "max_subspaces": 1500
+}
+
+CONFIG - RaR-category
+{
+    "knn_neighbors": 3,
+    "mi_neighbors": 6,
+    "k": 10,
+    "nominal_distance": 1,
+    "use_cv": false,
+    "eval_method": "rar",
+    "seed": null,
+    "n_subspaces": 859,
+    "subspace_size": [
+        1,
+        3
+    ],
+    "n_jobs": 1,
+    "boost_value": 0.1,
+    "boost_inter": 0.1,
+    "boost_corr": 0.1,
+    "active_sampling": true,
+    "active_sampling_mr": true,
+    "active_sampling_rel": true,
+    "active_sampling_corr": true,
+    "approach": "deletion",
+    "create_category": true,
+    "weight_approach": "alpha",
+    "dist_method": "distance",
+    "imputation_method": "knn",
+    "subspace_method": "adaptive",
+    "redundancy_approach": "arvind",
+    "beta": 0.01,
+    "weight": 1,
+    "n_targets": 1,
+    "n_resamples": 5,
+    "min_slices": 30,
+    "regularization": 1,
+    "samples_per_class": 5,
+    "max_subspaces": 1500
+}
+
+CONFIG - RaR-partial
+{
+    "knn_neighbors": 3,
+    "mi_neighbors": 6,
+    "k": 10,
+    "nominal_distance": 1,
+    "use_cv": false,
+    "eval_method": "rar",
+    "seed": null,
+    "n_subspaces": 859,
+    "subspace_size": [
+        1,
+        3
+    ],
+    "n_jobs": 1,
+    "boost_value": 0.1,
+    "boost_inter": 0.1,
+    "boost_corr": 0.1,
+    "active_sampling": true,
+    "active_sampling_mr": true,
+    "active_sampling_rel": true,
+    "active_sampling_corr": true,
+    "approach": "partial",
+    "create_category": false,
+    "weight_approach": "alpha",
+    "dist_method": "distance",
+    "imputation_method": "knn",
+    "subspace_method": "adaptive",
+    "redundancy_approach": "arvind",
+    "beta": 0.01,
+    "weight": 1,
+    "n_targets": 1,
+    "n_resamples": 5,
+    "min_slices": 30,
+    "regularization": 1,
+    "samples_per_class": 5,
+    "max_subspaces": 1500
+}
+
+CONFIG - RaR-alpha
+{
+    "knn_neighbors": 3,
+    "mi_neighbors": 6,
+    "k": 10,
+    "nominal_distance": 1,
+    "use_cv": false,
+    "eval_method": "rar",
+    "seed": null,
+    "n_subspaces": 859,
+    "subspace_size": [
+        1,
+        3
+    ],
+    "n_jobs": 1,
+    "boost_value": 0.1,
+    "boost_inter": 0.1,
+    "boost_corr": 0.1,
+    "active_sampling": true,
+    "active_sampling_mr": true,
+    "active_sampling_rel": true,
+    "active_sampling_corr": true,
+    "approach": "fuzzy",
+    "create_category": false,
+    "weight_approach": "alpha",
+    "dist_method": "distance",
+    "imputation_method": "knn",
+    "subspace_method": "adaptive",
+    "redundancy_approach": "arvind",
+    "beta": 0.01,
+    "weight": 1,
+    "n_targets": 1,
+    "n_resamples": 5,
+    "min_slices": 30,
+    "regularization": 1,
+    "samples_per_class": 5,
+    "max_subspaces": 1500
+}
+
+CONFIG - RaR-proba
+{
+    "knn_neighbors": 3,
+    "mi_neighbors": 6,
+    "k": 10,
+    "nominal_distance": 1,
+    "use_cv": false,
+    "eval_method": "rar",
+    "seed": null,
+    "n_subspaces": 859,
+    "subspace_size": [
+        1,
+        3
+    ],
+    "n_jobs": 1,
+    "boost_value": 0.1,
+    "boost_inter": 0.1,
+    "boost_corr": 0.1,
+    "active_sampling": true,
+    "active_sampling_mr": true,
+    "active_sampling_rel": true,
+    "active_sampling_corr": true,
+    "approach": "fuzzy",
+    "create_category": false,
+    "weight_approach": "proba",
+    "dist_method": "distance",
+    "imputation_method": "knn",
+    "subspace_method": "adaptive",
+    "redundancy_approach": "arvind",
+    "beta": 0.01,
+    "weight": 1,
+    "n_targets": 1,
+    "n_resamples": 5,
+    "min_slices": 30,
+    "regularization": 1,
+    "samples_per_class": 5,
+    "max_subspaces": 1500
+}
+
+CONFIG - RaR-distance
+{
+    "knn_neighbors": 3,
+    "mi_neighbors": 6,
+    "k": 10,
+    "nominal_distance": 1,
+    "use_cv": false,
+    "eval_method": "rar",
+    "seed": null,
+    "n_subspaces": 859,
+    "subspace_size": [
+        1,
+        3
+    ],
+    "n_jobs": 1,
+    "boost_value": 0.1,
+    "boost_inter": 0.1,
+    "boost_corr": 0.1,
+    "active_sampling": true,
+    "active_sampling_mr": true,
+    "active_sampling_rel": true,
+    "active_sampling_corr": true,
+    "approach": "fuzzy",
+    "create_category": false,
+    "weight_approach": "imputed",
+    "dist_method": "distance",
+    "imputation_method": "mice",
+    "subspace_method": "adaptive",
+    "redundancy_approach": "arvind",
+    "beta": 0.01,
+    "weight": 1,
+    "n_targets": 1,
+    "n_resamples": 5,
+    "min_slices": 30,
+    "regularization": 1,
+    "samples_per_class": 5,
+    "max_subspaces": 1500
+}
+
+CONFIG - RaR-radius
+{
+    "knn_neighbors": 3,
+    "mi_neighbors": 6,
+    "k": 10,
+    "nominal_distance": 1,
+    "use_cv": false,
+    "eval_method": "rar",
+    "seed": null,
+    "n_subspaces": 859,
+    "subspace_size": [
+        1,
+        3
+    ],
+    "n_jobs": 1,
+    "boost_value": 0.1,
+    "boost_inter": 0.1,
+    "boost_corr": 0.1,
+    "active_sampling": true,
+    "active_sampling_mr": true,
+    "active_sampling_rel": true,
+    "active_sampling_corr": true,
+    "approach": "fuzzy",
+    "create_category": false,
+    "weight_approach": "imputed",
+    "dist_method": "radius",
+    "imputation_method": "mice",
+    "subspace_method": "adaptive",
+    "redundancy_approach": "arvind",
+    "beta": 0.01,
+    "weight": 1,
+    "n_targets": 1,
+    "n_resamples": 5,
+    "min_slices": 30,
+    "regularization": 1,
+    "samples_per_class": 5,
+    "max_subspaces": 1500
+}
+
+CONFIG - RaR-multi
+{
+    "knn_neighbors": 3,
+    "mi_neighbors": 6,
+    "k": 10,
+    "nominal_distance": 1,
+    "use_cv": false,
+    "eval_method": "rar",
+    "seed": null,
+    "n_subspaces": 859,
+    "subspace_size": [
+        1,
+        3
+    ],
+    "n_jobs": 1,
+    "boost_value": 0.1,
+    "boost_inter": 0.1,
+    "boost_corr": 0.1,
+    "active_sampling": true,
+    "active_sampling_mr": true,
+    "active_sampling_rel": true,
+    "active_sampling_corr": true,
+    "approach": "fuzzy",
+    "create_category": false,
+    "weight_approach": "multiple",
+    "dist_method": "distance",
+    "imputation_method": "knn",
+    "subspace_method": "adaptive",
+    "redundancy_approach": "arvind",
+    "beta": 0.01,
+    "weight": 1,
+    "n_targets": 1,
+    "n_resamples": 5,
+    "min_slices": 30,
+    "regularization": 1,
+    "samples_per_class": 5,
+    "max_subspaces": 1500
+}
+
+CONFIG - MEAN + RaR
+{
+    "knn_neighbors": 3,
+    "mi_neighbors": 6,
+    "k": 10,
+    "nominal_distance": 1,
+    "use_cv": false,
+    "eval_method": "rar",
+    "seed": null,
+    "n_subspaces": 859,
+    "subspace_size": [
+        1,
+        3
+    ],
+    "n_jobs": 1,
+    "boost_value": 0.1,
+    "boost_inter": 0.1,
+    "boost_corr": 0.1,
+    "active_sampling": true,
+    "active_sampling_mr": true,
+    "active_sampling_rel": true,
+    "active_sampling_corr": true,
+    "approach": "deletion",
+    "create_category": false,
+    "weight_approach": "alpha",
+    "dist_method": "distance",
+    "imputation_method": "knn",
+    "subspace_method": "adaptive",
+    "redundancy_approach": "arvind",
+    "beta": 0.01,
+    "weight": 1,
+    "n_targets": 1,
+    "n_resamples": 5,
+    "min_slices": 30,
+    "regularization": 1,
+    "samples_per_class": 5,
+    "max_subspaces": 1500
+}
+
+CONFIG - MICE + RaR
+{
+    "knn_neighbors": 3,
+    "mi_neighbors": 6,
+    "k": 10,
+    "nominal_distance": 1,
+    "use_cv": false,
+    "eval_method": "rar",
+    "seed": null,
+    "n_subspaces": 859,
+    "subspace_size": [
+        1,
+        3
+    ],
+    "n_jobs": 1,
+    "boost_value": 0.1,
+    "boost_inter": 0.1,
+    "boost_corr": 0.1,
+    "active_sampling": true,
+    "active_sampling_mr": true,
+    "active_sampling_rel": true,
+    "active_sampling_corr": true,
+    "approach": "deletion",
+    "create_category": false,
+    "weight_approach": "alpha",
+    "dist_method": "distance",
+    "imputation_method": "knn",
+    "subspace_method": "adaptive",
+    "redundancy_approach": "arvind",
+    "beta": 0.01,
+    "weight": 1,
+    "n_targets": 1,
+    "n_resamples": 5,
+    "min_slices": 30,
+    "regularization": 1,
+    "samples_per_class": 5,
+    "max_subspaces": 1500
+}
+
+CONFIG - DELETION + RaR
+{
+    "knn_neighbors": 3,
+    "mi_neighbors": 6,
+    "k": 10,
+    "nominal_distance": 1,
+    "use_cv": false,
+    "eval_method": "rar",
+    "seed": null,
+    "n_subspaces": 859,
+    "subspace_size": [
+        1,
+        3
+    ],
+    "n_jobs": 1,
+    "boost_value": 0.1,
+    "boost_inter": 0.1,
+    "boost_corr": 0.1,
+    "active_sampling": true,
+    "active_sampling_mr": true,
+    "active_sampling_rel": true,
+    "active_sampling_corr": true,
+    "approach": "deletion",
+    "create_category": false,
+    "weight_approach": "alpha",
+    "dist_method": "distance",
+    "imputation_method": "knn",
+    "subspace_method": "adaptive",
+    "redundancy_approach": "arvind",
+    "beta": 0.01,
+    "weight": 1,
+    "n_targets": 1,
+    "n_resamples": 5,
+    "min_slices": 30,
+    "regularization": 1,
+    "samples_per_class": 5,
+    "max_subspaces": 1500
+}
